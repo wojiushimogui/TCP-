@@ -19,6 +19,7 @@ while True:
 date=b''.join(buffer)
 
 #第五步：关闭连接
+s.close()
 #由于接收到的数据包括http头和网页本身，因此将其分开
 header,html=date.split(b'\r\n\r\n',1)
 print(header.decode('utf-8'))
